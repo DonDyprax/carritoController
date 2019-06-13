@@ -93,12 +93,12 @@ class ControlActivity : AppCompatActivity(), Orientation.Listener {
         if(rollVal < -45) { rollVal = -45 }
 
         when(rollVal) {
-            in 45..31 -> sendCommand("A")
-            in 30..16 -> sendCommand("B")
-            in 15..1 -> sendCommand("C")
-            in 0..-15 -> sendCommand("D")
-            in -16..-30 -> sendCommand("E")
-            in -31..-45 -> sendCommand("F")
+            in 45 downTo 31 -> sendCommand("A")
+            in 30 downTo 16 -> sendCommand("B")
+            in 15 downTo 1 -> sendCommand("C")
+            in 0 downTo  -15 -> sendCommand("D")
+            in -16 downTo -30 -> sendCommand("E")
+            in -31 downTo -45 -> sendCommand("F")
         }
 
         /*var rollLimit: Double
